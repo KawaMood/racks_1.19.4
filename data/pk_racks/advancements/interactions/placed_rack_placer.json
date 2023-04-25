@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "item": {
+                    "nbt": "{pkCustomBlockPlacer:1b,pkRack:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_racks:blocks/rack/actions/player_placed_rack_placer/trigger"
+    }
+}
