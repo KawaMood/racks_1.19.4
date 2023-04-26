@@ -1,4 +1,4 @@
-#> pk_racks:base/uninstall/after_10_ticks
+#> pk_racks:base/uninstall/after_1s
 
 # Remove custom blocks when chunks are (normally) fully loaded
 execute as @e[type=marker,tag=pk.racks.uninstall.forceload_chunk] at @s run function pk_racks:base/uninstall/remove_custom_block

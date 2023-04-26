@@ -13,4 +13,4 @@ execute if score $temp pk.dimension.id matches -99 run forceload add -30000000 1
 execute if score $temp pk.dimension.id matches -99 positioned -30000000 0 1611 run scoreboard players operation $temp pk.dimension.id = @e[type=marker,tag=pk.dimension.marker,distance=..0.1,limit=1] pk.dimension.id
 
 # Set the dimension id
-execute store result storage pk.common:data Temp.Waystone.Dimension.id int 1 run scoreboard players get $temp pk.dimension.id
+execute store result storage pk.common:data Temp.Rack.Dimension.id int 1 run scoreboard players get $temp pk.dimension.id

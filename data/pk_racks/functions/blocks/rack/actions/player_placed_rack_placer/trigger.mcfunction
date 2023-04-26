@@ -1,11 +1,11 @@
 #> pk_racks:blocks/rack/actions/player_placed_rack_placer/trigger
-# Player placed a {Waystone:1b} player head block
+# Player placed a {Rack:1b} player head block
 #@within advancement pk_racks:interactions/placed_rack
 
 # Revoke advancement
 advancement revoke @s only pk_racks:interactions/placed_rack_placer
 
-# Store item data the player used to place the Waystone
+# Store item data the player used to place the Rack
 data remove storage pk.common:data Temp
 data modify storage pk.common:data Temp.Item set from entity @s SelectedItem
 
