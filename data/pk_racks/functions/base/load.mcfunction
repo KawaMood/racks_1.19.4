@@ -46,10 +46,8 @@ execute unless data storage pk.racks:data Blocks.Racks[{}] run data modify stora
 # Define objectives that are common to each PK data pack:
 # - pk.temp only concerns temp values that can be cleared at any time without risks.
 # - pk.value is used for fixed values and variable settings, and won't be cleared on uninstallation until there is no PK data pack anymore.
-# - pk.version is used to store the version entities have been placed from or updated with
 scoreboard objectives add pk.temp dummy
 scoreboard objectives add pk.value dummy
-scoreboard objectives add pk.version dummy
 scoreboard objectives add pk.custom_block.component.id dummy
 scoreboard objectives add pk.custom_block.interaction.id dummy
 scoreboard objectives add pk.crafted.knowledge_book crafted:knowledge_book
@@ -71,9 +69,9 @@ function pk_racks:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.racks.version pk.value matches 3 run function pk_racks:base/update/start
+execute unless score $pk.racks.version pk.value matches 4 run function pk_racks:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $logs.load pk.value matches ..0 run tellraw @a [{"text": "Loaded ","color": "yellow"},{"text": "Racks ","color": "aqua","bold": true},{"text": "(V.","color": "aqua"},{"nbt":"Datapacks[{Name:\"Racks\"}].Version", "storage": "pk.common:data","color": "aqua"},{"text": ")","color": "aqua"},{"text": " successfully"}]
+execute unless score $logs.load pk.value matches ..0 run tellraw @a [{"text": "Loaded ","color": "yellow"},{"text": "PK Racks ","color": "aqua","bold": true},{"text": "(V.","color": "aqua"},{"nbt":"Datapacks[{Name:\"Racks\"}].Version", "storage": "pk.common:data","color": "aqua"},{"text": ")","color": "aqua"},{"text": " successfully"}]

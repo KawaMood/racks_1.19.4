@@ -5,7 +5,7 @@
 data remove storage pk.common:data Temp.Rack
 
 # Set version
-execute store result storage pk.common:data Temp.Rack.version int 1 run scoreboard players get $pk.racks.version pk.value
+execute store result storage pk.common:data Temp.Rack.Version int 1 run scoreboard players get $pk.racks.version pk.value
 
 # Set component score id
 execute store result storage pk.common:data Temp.Rack.id int 1 run scoreboard players get $next pk.custom_block.component.id

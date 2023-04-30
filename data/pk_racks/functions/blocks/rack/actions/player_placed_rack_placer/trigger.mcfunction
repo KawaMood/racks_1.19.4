@@ -6,7 +6,7 @@
 advancement revoke @s only pk_racks:interactions/placed_rack_placer
 
 # Store item data the player used to place the Rack
-data remove storage pk.common:data Temp
+data remove storage pk.common:data Temp.Item
 data modify storage pk.common:data Temp.Item set from entity @s SelectedItem
 
 # Search the placed rack
