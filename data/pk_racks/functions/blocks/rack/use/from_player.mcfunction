@@ -21,6 +21,9 @@ execute store result score $item_rotation pk.temp run data get storage pk.common
 execute if data storage pk.common:data Temp.Rack{Wall:0b} run function pk_racks:blocks/rack/use/ground/switch_events
 execute if data storage pk.common:data Temp.Rack{Wall:1b} run function pk_racks:blocks/rack/use/wall/switch_events
 
+# Update block list
+function pk_racks:blocks/rack/use/blocks_list/update_start
+
 # Store data to controller (storage Temp.Rack was modified on the fly)
 data modify entity @e[type=marker,tag=pk.racks.rack.controller,tag=pk.temp.current.component,distance=..18,limit=1] data.Rack set from storage pk.common:data Temp.Rack
 

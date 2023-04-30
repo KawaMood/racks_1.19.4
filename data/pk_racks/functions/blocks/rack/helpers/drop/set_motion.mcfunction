@@ -13,8 +13,8 @@ scoreboard players remove $random pk.value 10
 execute store result storage pk.common:data Temp.Entity.Motion[2] double 0.01 run scoreboard players get $random pk.value
 data modify entity @s Motion set from storage pk.common:data Temp.Entity.Motion
 
-# Air toggling
-function pk_racks:packages/air_toggling/context_prepare
-
 # (Reset random max to original value)
 scoreboard players set $random_max pk.value 1000
+
+# Air toggling
+function pk_racks:packages/air_toggling/context_prepare
